@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
         
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
         titleLabel.text = hardness
         timer.invalidate()
         
+        progressBar.progress = 0.0
+        
         timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(updateTimer), userInfo:nil, repeats: true)
         
     }
@@ -35,6 +38,8 @@ class ViewController: UIViewController {
         if secondsPassed < totalTime {
             print("\(secondsPassed) seconds.")
             secondsPassed += 1
+            progressBar.progress = Float(secondsPassed) / Float(totalTime)
+            print(progressBar.progress)
         } else {
             timer.invalidate()
             titleLabel.text = "DONE!"
