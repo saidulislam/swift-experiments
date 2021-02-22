@@ -61,6 +61,8 @@ class ViewController: UIViewController {
         questionNumber = Int.random(in: 0...quiz.count)
         updateUI(qnum: questionNumber)
         
+        Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(updateButton), userInfo: nil, repeats: false)
+        
     }
     
 
@@ -68,7 +70,7 @@ class ViewController: UIViewController {
         questionLabel.text = quiz[qnum].q
     }
     
-    func updateButton() {
+    @objc func updateButton() {
         trueButton.setTitleColor(UIColor.white, for: .normal)
         falseButton.setTitleColor(UIColor.white, for: .normal)
     }
