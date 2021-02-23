@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Score "; ObjectID = "iP9-ry-ydy"; */
+"iP9-ry-ydy.text" = "Score ";
+
+/* Class = "UIButton"; normalTitle = "True"; ObjectID = "oVw-Hl-IRe"; */
+"oVw-Hl-IRe.normalTitle" = "True";
+
+/* Class = "UILabel"; text = "Question Text"; ObjectID = "rSI-li-mhO"; */
+"rSI-li-mhO.text" = "Question Text";
+
+/* Class = "UIButton"; normalTitle = "False"; ObjectID = "tbn-vQ-GyC"; */
+"tbn-vQ-GyC.normalTitle" = "False";
